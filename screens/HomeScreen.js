@@ -1,9 +1,8 @@
-import { setStatusBarBackgroundColor } from 'expo-status-bar';
 import { Text, View, ScrollView, StyleSheet } from 'react-native';
 
 export default function HomeScreen() {
     return (        
-        <ScrollView style={styles.list}>
+        <ScrollView>
             {[
             {
                 title: "Project 1: Python",
@@ -35,9 +34,6 @@ export default function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
-    list: {
-        flex: 1,
-    },
     listItem: {
         marginBottom: '2%',
         backgroundColor: 'white',
