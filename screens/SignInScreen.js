@@ -1,8 +1,18 @@
+import { useContext } from 'react';
 import { KeyboardAvoidingView, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { AuthContext } from '../store/AuthContext'
 
-const SignInScreen = props => {
+export default function SignInScreen() {
+    const navigation = useNavigation();
+    const auth = useContext(AuthContext);
+
     signIn = () => {
-        props.navigation.navigate('Home');
+        auth.authenticate();
+    }
+
+    signUp = () => {
+        navigation.navigate('SignUp');
     }
 
     return (
@@ -13,7 +23,7 @@ const SignInScreen = props => {
             <TouchableOpacity style={styles.signInButton} onPress={this.signIn}>
                 <Text style={styles.signInButtonText}>Sign In</Text>
             </TouchableOpacity>
-            <Text style={styles.forgotPasswordText} onPress={this.signIn}>Forgot Password?</Text>
+            <Text style={styles.forgotPasswordText} onPress={this.signUp}>Forgot Password?</Text>
         </KeyboardAvoidingView>
     );
 }
@@ -58,5 +68,3 @@ const styles = StyleSheet.create({
         color: "#0000EE",
     }
 });
-
-export default SignInScreen;

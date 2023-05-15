@@ -11,6 +11,12 @@ export default function HomeScreen() {
                 class: "Data Science"
             },
             {
+                title: "Homework Assignment 12",
+                description: "Do some datapath stuff",
+                due: "April 25, 2023",
+                class: "Computer Organization"
+            },
+            {
                 title: "Homework Assignment 13",
                 description: "Single-cycle datapath processing",
                 due: "May 1, 2023",
@@ -20,6 +26,18 @@ export default function HomeScreen() {
                 title: "C28A1 SOLID Part 1",
                 description: "An introduction to the Single Responsibility Principle (SRP) and Open/Closed Principle (OCP)",
                 due: "April 28, 2023",
+                class: "Software Engineering"
+            },
+            {
+                title: "C28A1 SOLID Part 2",
+                description: "An introduction to the Liskov Substitution Principle (LSP)",
+                due: "April 28, 2023",
+                class: "Software Engineering"
+            },
+            {
+                title: "C29 Final Assignment",
+                description: "A culmination of all of what we've learned!",
+                due: "May 1, 2023",
                 class: "Software Engineering"
             }
             ].map((item) => 

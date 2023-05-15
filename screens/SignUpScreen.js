@@ -1,10 +1,6 @@
 import { KeyboardAvoidingView, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 
-const SignUpScreen = props => {
-    signUp = () => {
-        console.log(props);
-    }
-
+export default function SignUpScreen() {
     return (
         <KeyboardAvoidingView style={styles.signIn}>
             <Text style={styles.header}>Studier</Text>
@@ -49,5 +45,3 @@ const styles = StyleSheet.create({
         color: "#0000EE",
     }
 });
-
-export default SignUpScreen;
