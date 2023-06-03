@@ -69,4 +69,4 @@ const styles = StyleSheet.create({
        color: 'gray',
        marginTop: '2.5%'
     }
-  });
+});

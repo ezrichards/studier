@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import HomeScreen from './screens/HomeScreen';
 import ProfileScreen from './screens/ProfileScreen';
+import TasksScreen from './screens/TasksScreen';
 import SignInScreen from './screens/SignInScreen';
 import SignUpScreen from './screens/SignUpScreen';
 import AuthContextProvider, { AuthContext } from './store/AuthContext'
@@ -45,8 +46,8 @@ function AuthenticatedStack() {
                 if (route.name === 'Home') {
                   iconName = focused ? 'home' : 'home-outline';
                 }
-                else if (route.name === 'Add') {
-                  iconName = focused ? 'md-add-circle' : 'md-add-circle-outline';
+                else if (route.name === 'Tasks') {
+                  iconName = focused ? 'list' : 'list-outline';
                 } 
                 else if (route.name === 'Profile') {
                   iconName = focused ? 'person' : 'person-outline';
@@ -58,6 +59,7 @@ function AuthenticatedStack() {
             })}      
           >
             <Tab.Screen name="Home" component={HomeScreen} />
+            <Tab.Screen name="Tasks" component={TasksScreen} />
             <Tab.Screen name="Profile" component={ProfileScreen} />
           </Tab.Navigator>
         )}
